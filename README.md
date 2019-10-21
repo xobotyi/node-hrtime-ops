@@ -25,7 +25,7 @@ const start = process.hrtime();
 
 const elapsed = process.hrtime(start);
 
-if(isGreater(elapsed, [2, 5 * 1E5])){ // it will be true only if 2.5 seconds passed
+if(isGreater(elapsed, [2, 5 * 1E9/2])){ // it will be true only if 2.5 seconds passed
     console.log(`Script evaluation took ${toMilliseconds(elapsed)}ms`);
 }
 ```
