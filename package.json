@@ -19,6 +19,9 @@
   "author": "Anton Zinovyev",
   "license": "MIT",
   "version": "1.0.0",
+  "engines": {
+    "node": ">=10.4.0"
+  },
   "devDependencies": {
     "@types/jest": "^24.0.19",
     "@types/node": "^12.11.1",
