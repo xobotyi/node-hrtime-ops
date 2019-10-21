@@ -1,0 +1,10 @@
+{
+  "private": true,
+  "dependencies": {
+    "benchmark": "^2.1.4",
+    "performance-now": "^2.1.0"
+  },
+  "scripts": {
+    "start": "cd ../ && yarn && yarn build:cjs && cd benchmarks && yarn && node ./index.js"
+  }
+}

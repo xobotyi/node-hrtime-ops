@@ -1,0 +1,5 @@
+{
+  "extends": [
+    "@xobotyi/presets/tslint.json"
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "name": "node-hrtime-ops",
+  "description": "🙌A set of handy-dandy functions to cast, compare and process hrtime tags.",
+  "keywords": [
+    "hrtime",
+    "node",
+    "performance",
+    "cast",
+    "compare"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xobotyi/node-hrtime-ops.git"
+  },
+  "bugs": {
+    "url": "https://github.com/xobotyi/node-hrtime-ops/issues"
+  },
+  "homepage": "https://github.com/xobotyi/node-hrtime-ops",
+  "author": "Anton Zinovyev",
+  "license": "MIT",
+  "version": "1.0.0",
+  "devDependencies": {
+    "@types/jest": "^24.0.19",
+    "@types/node": "^12.11.1",
+    "@xobotyi/presets": "^0.0.7",
+    "codacy-coverage": "^3.4.0",
+    "husky": "^3.0.9",
+    "jest": "^24.9.0",
+    "lint-staged": "^9.4.2",
+    "prettier": "^1.18.2",
+    "rimraf": "^3.0.0",
+    "ts-jest": "^24.1.0",
+    "tslint": "^5.20.0",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-plugin-prettier": "^2.0.1",
+    "typescript": "^3.6.4"
+  },
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "esnext": "dist/esnext/index.js",
+  "types": "dist/types/index.d.ts",
+  "scripts": {
+    "lint": "tslint 'src/**/*.ts' -t verbose",
+    "lint:fix": "yarn lint --fix",
+    "lint:types": "tsc --noEmit",
+    "clean": "rimraf dist && rimraf coverage",
+    "build:cjs": "tsc -m commonjs --outDir dist/cjs",
+    "build:esm": "tsc -m es6 --outDir dist/esm",
+    "build:esnext": "tsc -m esnext --outDir dist/esnext -t esnext -d --declarationDir dist/types",
+    "build": "yarn clean && yarn build:cjs && yarn build:esm && yarn build:esnext",
+    "test": "jest",
+    "test:watch": "yarn test --watch",
+    "push-codacy-coverage": "cat ./coverage/lcov.info | codacy-coverage -p ."
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lint:types && lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.ts": [
+      "tslint --fix -t verbose",
+      "git add"
+    ]
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "clearMocks": true,
+    "collectCoverage": true,
+    "coverageDirectory": "coverage",
+    "coverageReporters": [
+      "lcov"
+    ],
+    "collectCoverageFrom": [
+      "<rootDir>/src/**/*.ts"
+    ],
+    "testMatch": [
+      "<rootDir>/tests/**/*.test.ts"
+    ]
+  }
+}
