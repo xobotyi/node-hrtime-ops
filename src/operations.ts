@@ -19,8 +19,8 @@ function fixNanoOverflow(t: HighResTime): HighResTime {
   }
 
   // fix negative zeros
-  if (t[0] === -0) {t[0] = 0}
-  if (t[1] === -0) {t[1] = 0}
+  if (t[0] === -0) {t[0] = 0;}
+  if (t[1] === -0) {t[1] = 0;}
 
   return t;
 }
