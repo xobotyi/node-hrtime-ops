@@ -9,10 +9,7 @@
     "noUnusedParameters": true,
     "strictNullChecks": true,
     "strict": true,
-    "outDir": "dist",
-    "lib": [
-      "esnext"
-    ]
+    "outDir": "dist"
   },
   "include": [
     "src/**/*.ts"

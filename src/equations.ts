@@ -1,4 +1,5 @@
-import { HighResTime, toSeconds } from './operations';
+import { toSeconds } from './casts';
+import { HighResTime } from './operations';
 
 /**
  * Returns true if both times are equal

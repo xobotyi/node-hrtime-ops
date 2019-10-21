@@ -1,6 +1,6 @@
 import { fromMilliseconds, toMilliseconds } from "../../src";
 
-describe('operations#fromSeconds', function() {
+describe('casts#fromSeconds', function() {
     it('should be defined', function() {
         expect(fromMilliseconds).toBeDefined();
     });
@@ -13,7 +13,7 @@ describe('operations#fromSeconds', function() {
         expect(res).toEqual([1, 2]);
     });
 
-    it('should cast number to hrtime tag', function() {
+    it('should cast number to hrtime tuple', function() {
         expect(fromMilliseconds(toMilliseconds([1, 2]))).toEqual([1, 2]);
         expect(fromMilliseconds(toMilliseconds([-1, -2]))).toEqual([-1, -2]);
         expect(fromMilliseconds(toMilliseconds([0, 0]))).toEqual([0, 0]);

@@ -1,6 +1,6 @@
 import { toMicroseconds } from "../../src";
 
-describe('operations#toMilliseconds', function() {
+describe('casts#toMilliseconds', function() {
     it('should be defined', function() {
         expect(toMicroseconds).toBeDefined();
     });
