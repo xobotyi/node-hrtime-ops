@@ -14,8 +14,9 @@ matrix:
   fast_finish: true
 
 cache:
+  yarn: true
   directories:
-    - "node_modules"
+    - node_modules
 
 script:
   - npm run test
