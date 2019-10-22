@@ -1,4 +1,6 @@
 node_modules
 dist
+coverage
 .idea
 yarn-error.log
+package-lock.json
