@@ -18,7 +18,7 @@
   "homepage": "https://github.com/xobotyi/node-hrtime-ops",
   "author": "Anton Zinovyev",
   "license": "MIT",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "engines": {
     "node": ">=10.4.0"
   },
